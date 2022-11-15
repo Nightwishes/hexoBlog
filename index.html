@@ -212,7 +212,7 @@
     
     <!-- banner video cover -->
     <video autoplay="autoplay" loop muted playsinline webkit-playinginline class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3">
-        <source src="/img/banner.png" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="//cdn.moji.com/websrc/video/autumn20190924.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
         Your browser does not support HTML5 video.
     </video>
     <!-- banner video cover end -->
@@ -237,9 +237,16 @@
                         </h1>
 
                         
-                            <a data-fancybox data-fancybox="gallery" target="_blank" rel="noopener" href="https://cdn.moji.com/websrc/video/autumn20190924.mp4" class="trm-btn trm-btn-border">
-                                Video <i class="fas fa-play"></i>
-                            </a>
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        index.html
+                                    </span
+                                ></li>
+                            </ul>
                         
                     </div>
                     <!-- banner title end -->
@@ -290,12 +297,20 @@
 
 <div class="trm-social">
     
-        <a href="https://github.com" title="github" rel="nofollow" target="_blank">
+        <a href="https://github.com/MaLuns" title="Github" rel="nofollow" target="_blank">
             <i class="fab fa-github"></i>
         </a>
     
-        <a href="https://gitee.com" title="gitee" rel="nofollow" target="_blank">
-            <i class="iconfont cg-gitee"></i>
+        <a href="https://gitee.com/ml13" title="Gitee" rel="nofollow" target="_blank">
+            <i class="fab fa-github-alt"></i>
+        </a>
+    
+        <a href="https://weibo.com/u/5022481764" title="Weibo" rel="nofollow" target="_blank">
+            <i class="fab fa-weibo"></i>
+        </a>
+    
+        <a href="/atom.xml" title="Rss" rel="nofollow" target="_blank">
+            <i class="fas fa-rss"></i>
         </a>
     
 </div>
@@ -416,25 +431,35 @@
     
 
     
+        <div class="trm-footer-item">
+            <span>© 2019- 2022</span>
+            <span class="footer-separator">·</span>
+            <span class="trm-accent-color">xjh</span>
+        </div>
+    
+
+      
 
     
         <div class="trm-footer-item">
-            <span>
-                Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v6.3.0
-            </span>
-            <span class="footer-separator"> | </span>
-            <span> 
-                Theme - 
-                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
-                vv1.2.2
-            </span>
+            The blog has been lovely to run <span id="since" class="trm-accent-color"></span> day
         </div>
-      
-
      
 
      
 </footer>
+
+<script>
+    function show_date_time () {
+        BirthDay = new Date("11/19/2019 17:00:00");
+        today = new Date();
+        timeold = (today.getTime() - BirthDay.getTime());
+        msPerDay = 24 * 60 * 60 * 1000
+        day = Math.floor(timeold / msPerDay)
+        since.innerHTML = day
+    }
+    show_date_time()
+</script>
  
                     <!-- footer end -->
 
